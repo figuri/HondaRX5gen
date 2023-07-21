@@ -15,6 +15,7 @@ function generateMarkdown(data) {
   return `# ${data.title}
 
 `;
+
 // inject the stuff (can use markdown language)
 // use the backticks to inject the data
 // use the ${} to inject the data (data.title) for example: # ${data.title} 
