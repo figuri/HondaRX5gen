@@ -2,7 +2,7 @@
 
 // add package that would import the generateMarkdown.js file
 // const generateMarkdown = require('./utils/generateMarkdown.js'); 
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const generateMarkdown = require('./generateMarkdown.js');
 const fs = require('fs');
 const inquirer = require('inquirer');
 
