@@ -67,6 +67,7 @@ const questions = [
     // > calling generate markdown function
     // > insert object of answers
     // invoke the writeToFile function
+    
 function init() {
     
     inquirer
@@ -91,5 +92,10 @@ init();
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     // create the readme
-
+    fs = require('fs');
+    fs.writeFile(fileName, data, (err) => {
+        if (err) throw err;
+        console.log('The file has been saved!');
+    }
+    );
 }
