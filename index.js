@@ -3,11 +3,11 @@
 // add package that would import the generateMarkdown.js file
 // const generateMarkdown = require('./utils/generateMarkdown.js'); 
 const generateMarkdown = require('./utils/generateMarkdown.js');
-
+const fs = require('fs');
 const inquirer = require('inquirer');
 
-// to import we will use require keyword ex: const badmath = require('./badmath.js'); 
-// > use your own word to name the variable (not matching the 'badmath' name)
+// to import we will use require keyword and the name of the package 
+// > use your own word to name the variable we used fs
 // node index.js ; to run the file
 
 // TODO: Create an array of questions for user input
@@ -71,11 +71,10 @@ const questions = [
 function init() {
     
     inquirer
-        prompt([
-            console.log(questions)
-            
-        ])
+        .prompt(questions)
         .then((answers) => {
+            const userAnswer = generateMarkdown(answers);
+            writeToFile('README.md', userAnswer);
             // Use user answer feedback for the question objects that will be used to generate the README
         }).catch((error) => {
             console.log(error);
@@ -91,11 +90,11 @@ init();
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    // create the readme
-    fs = require('fs');
+    // create the readme file
     fs.writeFile(fileName, data, (err) => {
         if (err) throw err;
         console.log('The file has been saved!');
     }
     );
 }
+
