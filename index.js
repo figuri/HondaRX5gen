@@ -72,6 +72,7 @@ function init() {
     inquirer
         prompt([
             console.log(questions)
+            
         ])
         .then((answers) => {
             // Use user answer feedback for the question objects that will be used to generate the README
