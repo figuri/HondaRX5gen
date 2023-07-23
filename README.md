@@ -3,7 +3,16 @@
   
   
   ## Description
-  This app is a easy to use terminal run questionare that will build a readme template written in markdown and add that file to the repository you run the app on 
+  This app is an easy to use terminal run questionare that will build a readme template written in markdown and add that file to the repository you run the app on 
+
+  tech used:
+  - node.js
+  - npm
+  - inquirer
+  - fs
+  - javascript
+  - markdown
+  
   
   ## Table of Contents
   - [Installation](#installation)
@@ -26,9 +35,7 @@
   To test the app simply run through the instructions with example text and if you feel satisfied feel free to give it a go with the markdown you want to use.
   
   ## License
-  This project is licensed under the .
-  For more details, see the [License](LICENSE) file.
-  
+  no license
   ## Questions
   For any questions or feedback, feel free to contact me through GitHub or email:
   - GitHub: [figuri](https://github.com/figuri)
